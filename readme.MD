@@ -116,6 +116,6 @@ For questions, suggestions, or other requests, please reach out to us through ou
 
 --
 
-© 2022 Vansah®. All rights reserved, See license.md for details.
+© 2023 Vansah®. All rights reserved, See license.md for details.
 
 https://www.vansah.com
