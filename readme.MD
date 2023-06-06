@@ -74,6 +74,47 @@ Vansah's API can be used to integrate Vansah with various tools, automation and 
 
 ##  Dependencies And Plugins Used
 
-- Vansah Connect Token 
 - Selenium.WebDriver
 - Selenium.WebDriver.ChromeDriver
+
+## Authentication
+Vansah current node api's expects vansahConnectToken as Authentication that can be passed in the header of a api request. 
+
+<a href="https://community.vansah.com/posts/how-to-create-a-vansah-api-token-in-jira">Generate your own token from here</a>
+
+## Usage/Examples
+
+```java
+//Nunit Test Function
+[Test]
+public void TestWebUrl()
+{
+           
+//Running Test Case for an Issue
+testExecute.AddTestRunFromJiraIssue(testCase);
+driver.Url = "https://vansah.com";
+driver.Manage().Window.Maximize();
+if (driver.Url.Equals("https://vansah.com/"))
+    {
+
+    //0 = N/A, 1 = FAILED, 2 = PASSED, 3 = UNTESTED
+    //Add logs for each step function(ResultID, AcutalResultComment, TestStepID, screenshotTrueorFalse, chromedriver/OtherBroswerdriver);
+    testExecute.AddTestLog(2, "As expected, Url is opened", 1, false, driver);
+
+    }
+    else
+    {
+    //0 = N/A, 1 = FAILED, 2 = PASSED, 3 = UNTESTED
+    //Add logs for each step function(ResultID, AcutalResultComment, TestStepID, screenshotTrueorFalse, chromedriver/OtherBroswerdriver);
+    testExecute.AddTestLog(2, "URL not Found", 1,false , driver);
+    }
+}
+```
+## Support
+For questions, suggestions, or other requests, please reach out to us through our support channels: https://community.vansah.com/ to raise a ticket: https://vansahapp.atlassian.net/servicedesk/customer/portals
+
+--
+
+© 2022 Vansah®. All rights reserved, See license.md for details.
+
+https://www.vansah.com
