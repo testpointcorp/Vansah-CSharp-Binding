@@ -81,7 +81,7 @@ Vansah's API can be used to integrate Vansah with various tools, automation and 
 Vansah current node api's expects vansahConnectToken as Authentication that can be passed in the header of a api request. 
 
 <a href="https://community.vansah.com/posts/how-to-create-a-vansah-api-token-in-jira">Generate your own token from here</a>
-<img src="![image](https://github.com/testpointcorp/Vansah-CSharp-Binder/assets/95007067/e13e0d45-a012-4abd-9618-2916a256b5f0) style="width:250px"/">
+![image](https://github.com/testpointcorp/Vansah-CSharp-Binder/assets/95007067/e13e0d45-a012-4abd-9618-2916a256b5f0)
 
 ## Usage/Examples
 
