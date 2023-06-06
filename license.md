@@ -6,7 +6,7 @@
  License
 </h1>
 
-Copyright (c) 2021-2022 Testpoint, Vansah
+Copyright (c) 2022-2023 Testpoint, Vansah
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
