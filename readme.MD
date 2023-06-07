@@ -22,6 +22,7 @@ Vansah's API can be used to integrate Vansah with various tools, automation and 
 ### Step 1
 
 Include VansahNode.cs into your Project directory
+
 ![image](https://github.com/testpointcorp/Vansah-CSharp-Binder/assets/95007067/c6fbd00a-d88d-4048-a5ef-c6a1312643e7)
 
 
@@ -58,43 +59,16 @@ Add your Test Case Key and the result into
 
             }
  ```
-![image](https://github.com/testpointcorp/Vansah-CSharp-Binder/assets/95007067/de51d14c-4af4-4ea5-9a1c-e547ee8137c0)
+### Step 4
+Run your Tests
+![image](https://github.com/testpointcorp/Vansah-CSharp-Binder/assets/95007067/bdf39c41-aa71-4e73-b2e3-1dabf277e228)
+
+### Step 5
+Check you Issue on Jira for the run
+![image](https://github.com/testpointcorp/Vansah-CSharp-Binder/assets/95007067/5b5e8b91-0040-4c0d-b23e-56dbd2de3a29)
+
 
 ![image](https://github.com/testpointcorp/Vansah-CSharp-Binder/assets/95007067/e97a50f2-177e-4b2d-92d1-7f19504f580d)
-
-
-
-
-```c#
-//Nunit Test Function
-[Test]
-public void TestWebUrl()
-{
-           
-//Running Test Case for an Issue
-testExecute.AddTestRunFromJiraIssue(testCase);
-driver.Url = "https://vansah.com";
-driver.Manage().Window.Maximize();
-if (driver.Url.Equals("https://vansah.com/"))
-    {
-
-    //0 = N/A, 1 = FAILED, 2 = PASSED, 3 = UNTESTED
-    //Add logs for each step function(ResultID, AcutalResultComment, TestStepID, screenshotTrueorFalse, chromedriver/OtherBroswerdriver);
-    testExecute.AddTestLog(2, "As expected, Url is opened", 1, false, driver);
-
-    }
-    else
-    {
-    //0 = N/A, 1 = FAILED, 2 = PASSED, 3 = UNTESTED
-    //Add logs for each step function(ResultID, AcutalResultComment, TestStepID, screenshotTrueorFalse, chromedriver/OtherBroswerdriver);
-    testExecute.AddTestLog(2, "URL not Found", 1,false , driver);
-    }
-}
-```
-
-
-
-
 
 
 ## API Reference
