@@ -61,12 +61,13 @@ Add your Test Case Key and the result into
  ```
 ### Step 4
 Run your Tests
+
 ![image](https://github.com/testpointcorp/Vansah-CSharp-Binder/assets/95007067/bdf39c41-aa71-4e73-b2e3-1dabf277e228)
+
+![image](https://github.com/testpointcorp/Vansah-CSharp-Binder/assets/95007067/5b5e8b91-0040-4c0d-b23e-56dbd2de3a29)
 
 ### Step 5
 Check you Issue on Jira for the run
-![image](https://github.com/testpointcorp/Vansah-CSharp-Binder/assets/95007067/5b5e8b91-0040-4c0d-b23e-56dbd2de3a29)
-
 
 ![image](https://github.com/testpointcorp/Vansah-CSharp-Binder/assets/95007067/e97a50f2-177e-4b2d-92d1-7f19504f580d)
 
