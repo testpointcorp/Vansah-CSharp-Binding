@@ -74,6 +74,68 @@ Check you Issue on Jira for the run
 ![image](https://github.com/testpointcorp/Vansah-CSharp-Binder/assets/95007067/e97a50f2-177e-4b2d-92d1-7f19504f580d)
 
 
+
+
+## Available Functions
+
+#### Add Quick Test
+
+```c#
+AddQuickTestFromJiraIssue(string testcase, int result);
+AddQuickTestFromTestFolders(string testcase, int result);  
+```
+| Description                     |
+:-------------------------------- |
+|To create a test run without logging the results to each of the test steps|
+
+#### Add Tests
+
+```c#
+//To Create a Test Run Identifier
+AddTestRunFromJiraIssue(string testcase);
+AddTestRunFromTestFolder(string testcase); 
+
+//Add Test Log to each step
+AddTestLog(int result, string comment, int testStepRow, bool sendScreenShot, IWebDriver driver);
+
+//To Update the Test Log
+UpdateTestLog(int result, string comment, bool sendScreenShot, IWebDriver driver);
+
+//To Remove the Current Test Log
+RemoveTestLog();
+
+//To Remove the Current Test Run
+RemoveTestRun();
+
+```
+| Description                     |
+:-------------------------------- |
+|Follow Above functions to add test results to each of your test steps under test script|
+
+#### Add Test Properties
+
+```c#
+//To Set the TestFolder as an Asset
+SetTESTFOLDERS_ID(string tESTFOLDERS_ID);
+
+//To Set the Jira Issue as an Asset
+SetJIRA_ISSUE_KEY(string jIRA_ISSUE_KEY);
+
+//To Set the Sprint in the Test Run Properties
+SetSPRINT_NAME(string SPRINT_NAME);
+
+//To Set the Version/Release in the Test Run Properties
+SetRELEASE_NAME(string RELEASE_NAME);
+
+//To Set the Environment in the Test Run Properties
+SetENVIRONMENT_NAME(string ENVIRONMENT_NAME);
+
+```
+| Description                     |
+:-------------------------------- |
+|To create a test run without logging the results to each of the test steps|
+
+
 ## API Reference
 
 #### Add Test Run
