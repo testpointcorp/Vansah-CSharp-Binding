@@ -118,7 +118,7 @@ RemoveTestRun();
 ```
 | Description                     |
 :-------------------------------- |
-|Follow Above functions to add test results to each of your test steps under test script|
+|Follow Above functions to add Test results to each of your Test Steps of the Test Case|
 
 #### Add Test Properties
 
@@ -141,7 +141,7 @@ SetENVIRONMENT_NAME(string ENVIRONMENT_NAME);
 ```
 | Description                     |
 :-------------------------------- |
-|To create a test run without logging the results to each of the test steps|
+|Above functions are use to declare the Asset and Test Properties|
 
 
 ## API Reference
