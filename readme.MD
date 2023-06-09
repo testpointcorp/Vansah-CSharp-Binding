@@ -11,7 +11,7 @@ Vansah's API can be used to integrate Vansah with various tools, automation and 
 
 ## Prerequisite
 
-* [Generate Vansah Connect Token ](https://vansahapp.atlassian.net/wiki/spaces/VANSAH/pages/33872/Generate+a+Vansah+API+Token+From+Jira)
+* [Generate Vansah Connect Token ](https://docs.vansah.com/docs-base/generate-a-vansah-api-token-from-jira/)
 * Vansah should have at least 1 Test Case to run
 * [Download VansahNode.cs C# binder from Github ](https://github.com/testpointcorp/Vansah-CSharp-Binder/blob/main/VansahNode.cs)
 * Selenium dependency should be installed
@@ -29,6 +29,9 @@ Include VansahNode.cs into your Project directory
 ### Step 2
 
 Configure VansahNode.cs file and paste your vansah connect token here 
+[Generate Vansah Connect Token ](https://docs.vansah.com/docs-base/generate-a-vansah-api-token-from-jira/)
+
+
 ![image](https://github.com/testpointcorp/Vansah-CSharp-Binder/assets/95007067/768343ee-7b5d-4117-87f4-2a160ace5c28)
 
 
