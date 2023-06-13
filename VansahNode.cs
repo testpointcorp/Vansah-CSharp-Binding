@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using OpenQA.Selenium;
 using System;
@@ -30,7 +30,7 @@ namespace Vansah
 
 
         //--------------------------- INFORM YOUR UNIQUE VANSAH TOKEN HERE ---------------------------------------------------
-        private static string VANSAH_TOKEN = "Your Vansah Token Here";
+        private static string VANSAH_TOKEN = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb20udmFuc2FoLmppcmEudmFuc2FoLXBsdWdpbiIsImlhdCI6MTY4NjE3ODg2OCwic3ViIjoiNjE5ZGMzNmJkNTk4NmMwMDZhZDE3YjVlIiwiZXhwIjoyNjg2MTc4ODY4LCJhdWQiOlsiOWZmZDNiNTEtM2E2Ni0zZmU1LTg1OTMtNWM4MmY4NTFhMzdjIl0sInR5cGUiOiJjb25uZWN0In0.wD8ttLAEjbxuax5PVK693ic54eFuBu5FPyFtZPP_36A";
 
 
         //--------------------------- INFORM IF YOU WANT TO UPDATE VANSAH HERE -----------------------------------------------
@@ -47,7 +47,7 @@ namespace Vansah
         private string CASE_KEY;   //CaseKey ID (Example - TEST-C1) Mandatory
         private string RELEASE_NAME;  //Release Key (JIRA Release/Version Key) Mandatory
         private string ENVIRONMENT_NAME; //Enivronment ID from Vansah for JIRA app. (Example SYS or UAT ) Mandatory
-        private int RESULT_KEY;    // Result Key such as (Result value. Options: (0 = N/A, 1= FAIL, 2= PASS, 3 = Not tested)) Mandatory
+        private string RESULT_NAME;    // Result Key such as (Result value. Options: (0 = N/A, 1= FAIL, 2= PASS, 3 = Not tested)) Mandatory
         private bool SEND_SCREENSHOT;   // true or false If Required to take a screenshot of the webPage that to be tested.
         private string COMMENT;  //Actual Result 	
         private int STEP_ORDER;   //Test Step index	
@@ -101,11 +101,11 @@ namespace Vansah
         //POST prod.vansahnode.app/api/v1/logs --> https://apidoc.vansah.com/#8cad9d9e-003c-43a2-b29e-26ec2acf67a7
         //Adds a new test log for the test case_key. Requires "test_run_identifier" from Add_test_run
 
-        public void AddTestLog(int result, string comment, int testStepRow, bool sendScreenShot, IWebDriver driver)
+        public void AddTestLog(string result, string comment, int testStepRow, bool sendScreenShot, IWebDriver driver)
         {
 
             //0 = N/A, 1 = FAIL, 2 = PASS, 3 = Not tested
-            RESULT_KEY = result;
+            RESULT_NAME = result;
             COMMENT = comment;
             STEP_ORDER = testStepRow;
             SEND_SCREENSHOT = sendScreenShot;
@@ -123,22 +123,22 @@ namespace Vansah
         //where only the overall result is important.
 
         //For JIRA ISSUES
-        public void AddQuickTestFromJiraIssue(string testcase, int result)
+        public void AddQuickTestFromJiraIssue(string testcase, string result)
         {
 
             //0 = N/A, 1= FAIL, 2= PASS, 3 = Not tested
             CASE_KEY = testcase;
-            RESULT_KEY = result;
+            RESULT_NAME = result;
 
             ConnectToVansahRest("AddQuickTestFromJiraIssue", null);
         }
         //For TestFolders
-        public void AddQuickTestFromTestFolders(string testcase, int result)
+        public void AddQuickTestFromTestFolders(string testcase, string result)
         {
 
             //0 = N/A, 1= FAIL, 2= PASS, 3 = Not tested
             CASE_KEY = testcase;
-            RESULT_KEY = result;
+            RESULT_NAME = result;
 
             ConnectToVansahRest("AddQuickTestFromTestFolders", null);
         }
@@ -171,11 +171,11 @@ namespace Vansah
         //POST update_test_log https://apidoc.vansah.com/#ae26f43a-b918-4ec9-8422-20553f880b48
         //will perform any updates required using the test log identifier which is returned from Add_test_log or Add_quick_test
 
-        public void UpdateTestLog(int result, string comment, bool sendScreenShot, IWebDriver driver)
+        public void UpdateTestLog(string result, string comment, bool sendScreenShot, IWebDriver driver)
         {
 
             //0 = N/A, 1= FAIL, 2= PASS, 3 = Not tested
-            RESULT_KEY = result;
+            RESULT_NAME = result;
             COMMENT = comment;
             SEND_SCREENSHOT = sendScreenShot;
             ConnectToVansahRest("UpdateTestLog", driver);
@@ -266,7 +266,7 @@ namespace Vansah
                     {
                         requestBody.Add("properties", Properties());
                     }
-                    requestBody.Add("result", resultObj(RESULT_KEY));
+                    requestBody.Add("result", resultObj(RESULT_NAME));
                     if (SEND_SCREENSHOT)
                     {
                         JsonArray array = new();
@@ -275,12 +275,13 @@ namespace Vansah
                         requestBody.Add("attachments", array);
                     }
 
-                    Console.WriteLine(requestBody);
+                    
                     httpClient.BaseAddress = new Uri(Add_TEST_RUN);
 
 
 
                     Content = new StringContent(requestBody.ToJsonString(), Encoding.UTF8, "application/json" /* or "application/json" in older versions */);
+                   
                     response = httpClient.PostAsync("", Content).Result;
 
                 }
@@ -293,7 +294,7 @@ namespace Vansah
                     {
                         requestBody.Add("properties", Properties());
                     }
-                    requestBody.Add("result", resultObj(RESULT_KEY));
+                    requestBody.Add("result", resultObj(RESULT_NAME));
                     if (SEND_SCREENSHOT)
                     {
                         JsonArray array = new();
@@ -304,7 +305,7 @@ namespace Vansah
 
 
 
-                    Console.WriteLine(requestBody);
+                    //Console.WriteLine(requestBody);
                     httpClient.BaseAddress = new Uri(Add_TEST_RUN);
 
 
@@ -333,7 +334,7 @@ namespace Vansah
                 {
                     requestBody = new();
 
-                    requestBody.Add("result", resultObj(RESULT_KEY));
+                    requestBody.Add("result", resultObj(RESULT_NAME));
                     requestBody.Add("actualResult", COMMENT);
                     if (SEND_SCREENSHOT)
                     {
@@ -504,12 +505,12 @@ namespace Vansah
             return testCase;
         }
         //JsonObject - To Add Result ID
-        private JsonObject resultObj(int result)
+        private JsonObject resultObj(string result)
         {
 
             JsonObject resultID = new();
 
-            resultID.Add("id", result);
+            resultID.Add("name", result);
 
 
             return resultID;
@@ -568,7 +569,7 @@ namespace Vansah
             stepNumber.Add("number", STEP_ORDER);
 
             JsonObject testResult = new();
-            testResult.Add("id", RESULT_KEY);
+            testResult.Add("name", RESULT_NAME);
 
             JsonObject testLogProp = new();
 
