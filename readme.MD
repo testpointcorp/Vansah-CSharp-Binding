@@ -59,16 +59,17 @@ The Test Case Key and Jira Issue Key are case sensitive.
                 Assert.Pass();
 
                 //Provide Your Test Case Key and Result 
-                //0 = N/A, 1 = FAILED, 2 = PASSED, 3 = UNTESTED
-                execute.AddQuickTestFromJiraIssue("TEST-C1", 2);
+                //N/A, FAILED, PASSED, UNTESTED
+                execute.AddQuickTestFromJiraIssue("TEST-C1", "PASSED");
             }
             catch (Exception ex)
             {
                 //Provide Your Test Case Key and Result 
-                //0 = N/A, 1 = FAILED, 2 = PASSED, 3 = UNTESTED
-                execute.AddQuickTestFromJiraIssue("TEST-C1", 1);
+                //N/A, FAILED, PASSED, UNTESTED
+                execute.AddQuickTestFromJiraIssue("TEST-C1", "FAILED");
 
             }
+        }
  ```
 ### Step 4
 Run your Tests
@@ -92,8 +93,8 @@ Check you Issue on Jira for the run
 #### Add Quick Test
 
 ```c#
-AddQuickTestFromJiraIssue(string testcase, int result);
-AddQuickTestFromTestFolders(string testcase, int result);  
+AddQuickTestFromJiraIssue(string testcase, string result);
+AddQuickTestFromTestFolders(string testcase, string result);  
 ```
 | Description                     |
 :-------------------------------- |
@@ -107,10 +108,10 @@ AddTestRunFromJiraIssue(string testcase);
 AddTestRunFromTestFolder(string testcase); 
 
 //Add Test Log to each step
-AddTestLog(int result, string comment, int testStepRow, bool sendScreenShot, IWebDriver driver);
+AddTestLog(string result, string comment, int testStepRow, bool sendScreenShot, IWebDriver driver);
 
 //To Update the Test Log
-UpdateTestLog(int result, string comment, bool sendScreenShot, IWebDriver driver);
+UpdateTestLog(string result, string comment, bool sendScreenShot, IWebDriver driver);
 
 //To Remove the Current Test Log
 RemoveTestLog();
