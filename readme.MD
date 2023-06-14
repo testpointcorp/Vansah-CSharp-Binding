@@ -1,4 +1,6 @@
-<img src='https://vansah.com/wp-content/uploads/2021/07/256x256.png' style="background-color : blue"/>
+<div align="center">
+  <img src="https://vansah.com/wp-content/uploads/2022/06/512x512.png" style="width:256px, height:256px"/>
+</div>
 
 # Vansah C# Binder
 Vansah's API can be used to integrate Vansah with various tools, automation and development frameworks including third-party applications. This .NET Binder is used for .NET automation projects with C#. Example tools would be Selenium with (.NET C#) 
