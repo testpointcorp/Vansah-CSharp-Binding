@@ -22,7 +22,7 @@ Vansah's API can be used to integrate Vansah with various tools, automation and 
 
 Include VansahNode.cs into your Project directory
 
-![image](https://github.com/testpointcorp/Vansah-CSharp-Binder/assets/95007067/c6fbd00a-d88d-4048-a5ef-c6a1312643e7)
+![image](https://github.com/testpointcorp/Vansah-CSharp-Binder/assets/95007067/c6fbd00a-d88d-4048-a5ef-c6a1312643e7.png)
 
 
 ### Step 2
