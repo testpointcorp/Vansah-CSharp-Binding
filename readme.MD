@@ -94,8 +94,8 @@ Check you Issue on Jira for the run
 #### Add Quick Test
 
 ```c#
-AddQuickTestFromJiraIssue(string testcase, string result);
-AddQuickTestFromTestFolders(string testcase, string result);  
+AddQuickTestFromJiraIssue(string testCase, string result);
+AddQuickTestFromTestFolders(string testCase, string result);  
 ```
 | Description                     |
 :-------------------------------- |
@@ -105,8 +105,8 @@ AddQuickTestFromTestFolders(string testcase, string result);
 
 ```c#
 //To Create a Test Run Identifier
-AddTestRunFromJiraIssue(string testcase);
-AddTestRunFromTestFolder(string testcase); 
+AddTestRunFromJiraIssue(string testCase);
+AddTestRunFromTestFolder(string testCase); 
 
 //Add Test Log to each step
 AddTestLog(string result, string comment, int testStepRow, bool sendScreenShot, IWebDriver driver);
@@ -129,19 +129,19 @@ RemoveTestRun();
 
 ```c#
 //To Set the TestFolder as an Asset
-SetTESTFOLDERS_ID(string tESTFOLDERS_ID);
+SetTESTFOLDERS_ID(string testFolders_Id);
 
 //To Set the Jira Issue as an Asset
-SetJIRA_ISSUE_KEY(string jIRA_ISSUE_KEY);
+SetJIRA_ISSUE_KEY(string jira_Issue_Key);
 
 //To Set the Sprint in the Test Run Properties
-SetSPRINT_NAME(string SPRINT_NAME);
+SetSPRINT_NAME(string sprint_Name);
 
 //To Set the Version/Release in the Test Run Properties
-SetRELEASE_NAME(string RELEASE_NAME);
+SetRELEASE_NAME(string release_Name);
 
 //To Set the Environment in the Test Run Properties
-SetENVIRONMENT_NAME(string ENVIRONMENT_NAME);
+SetENVIRONMENT_NAME(string environment_Name);
 
 ```
 | Description                     |
