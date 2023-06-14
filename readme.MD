@@ -33,7 +33,7 @@ Configure VansahNode.cs file and paste your vansah connect token here
 [Generate Vansah Connect Token ](https://docs.vansah.com/docs-base/generate-a-vansah-api-token-from-jira/)
 
 
-![image](https://github.com/testpointcorp/Vansah-CSharp-Binder/assets/95007067/768343ee-7b5d-4117-87f4-2a160ace5c28.png)
+![image](https://user-images.githubusercontent.com/95007067/245725004-0ed5e90b-6930-4b9e-8fa0-e7077305b933.png)
 
 
 ### Step 3
@@ -75,16 +75,16 @@ The Test Case Key and Jira Issue Key are case sensitive.
 ### Step 4
 Run your Tests
 
-![image](https://github.com/testpointcorp/Vansah-CSharp-Binder/assets/95007067/5b5e8b91-0040-4c0d-b23e-56dbd2de3a29.png)
+![image](https://user-images.githubusercontent.com/95007067/245725721-556bd502-1704-444d-ba03-422607e5c6fa.png)
 
-![image](https://github.com/testpointcorp/Vansah-CSharp-Binder/assets/95007067/bdf39c41-aa71-4e73-b2e3-1dabf277e228.png)
+![image](https://user-images.githubusercontent.com/95007067/245726916-ebdff6b0-2a6a-410a-935a-a9c44ef7f9be.png)
 
 
 
 ### Step 5
 Check you Issue on Jira for the run
 
-![image](https://github.com/testpointcorp/Vansah-CSharp-Binder/assets/95007067/e97a50f2-177e-4b2d-92d1-7f19504f580d.png)
+![image](https://user-images.githubusercontent.com/95007067/245727514-8b77246f-d9d1-4db1-843b-c36dbd99d028.png)
 
 
 
