@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://vansah.com/wp-content/uploads/2022/06/512x512.png" style="width:256px, height:256px"/>
+  <img src="https://vansah.com/wp-content/uploads/2022/06/512x512.png" style="width:256px !Important, height:256px !Important"/>
 </div>
 
 # Vansah C# Binder
