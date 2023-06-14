@@ -105,7 +105,7 @@ namespace Vansah
         {
 
             //0 = N/A, 1 = FAIL, 2 = PASS, 3 = Not tested
-            release_Name = result;
+            result_Name = result;
             comment = comment;
             step_Order = testStepRow;
             send_Screenshot = sendScreenShot;
@@ -138,7 +138,7 @@ namespace Vansah
 
             //0 = N/A, 1= FAIL, 2= PASS, 3 = Not tested
             case_Key = testCase;
-            release_Name = result;
+            result_Name = result;
 
             ConnectToVansahRest("AddQuickTestFromTestFolders", null);
         }
