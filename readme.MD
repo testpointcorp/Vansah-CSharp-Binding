@@ -12,7 +12,7 @@ Vansah's API can be used to integrate Vansah with various tools, automation and 
 ## Prerequisite
 
 * [Generate Vansah Connect Token ](https://docs.vansah.com/docs-base/generate-a-vansah-api-token-from-jira/)
-* Vansah should have at least 1 Test Case to run
+* [Atleast 1 Test Case linked to a Jira Issue to run] (https://docs.vansah.com/docs-base/linking-test-cases-to-a-jira-issue/)
 * [Download VansahNode.cs C# binder from Github ](https://github.com/testpointcorp/Vansah-CSharp-Binder/blob/main/VansahNode.cs)
 * Selenium dependency should be installed
 
