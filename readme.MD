@@ -7,7 +7,7 @@ Vansah's API can be used to integrate Vansah with various tools, automation and 
 
 ##  Tools and Languages
 -	C# Language
--	Jira cloud workspace with Vansah installed
+-	Jira cloud workspace with [Vansah Test Management For Jira](https://marketplace.atlassian.com/apps/1224250/vansah-test-management-for-jira) installed
 
 ## Prerequisite
 
