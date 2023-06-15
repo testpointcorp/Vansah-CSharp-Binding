@@ -9,6 +9,7 @@ using System.Net.Http.Headers;
 using System.Reflection.PortableExecutable;
 using System.Text;
 using System.Text.Json.Nodes;
+using System.Xml.Linq;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace Vansah
@@ -30,7 +31,7 @@ namespace Vansah
 
 
         //--------------------------- INFORM YOUR UNIQUE VANSAH TOKEN HERE ---------------------------------------------------
-        private static string vansah_Token = "Your Token Here";
+        private static string vansah_Token = "Your Vansah Token here";
 
 
         //--------------------------- INFORM IF YOU WANT TO UPDATE VANSAH HERE -----------------------------------------------
@@ -128,7 +129,7 @@ namespace Vansah
             //0 = N/A, 1= FAIL, 2= PASS, 3 = Not tested
             case_Key = testCase;
             result_Name = result;
-
+            send_Screenshot = false;
             ConnectToVansahRest("AddQuickTestFromJiraIssue", null);
         }
         //For TestFolders
@@ -138,6 +139,7 @@ namespace Vansah
             //0 = N/A, 1= FAIL, 2= PASS, 3 = Not tested
             case_Key = testCase;
             result_Name = result;
+            send_Screenshot = false;
 
             ConnectToVansahRest("AddQuickTestFromTestFolders", null);
         }
@@ -151,6 +153,7 @@ namespace Vansah
 
         public void RemoveTestRun()
         {
+            send_Screenshot = false;
             ConnectToVansahRest("RemoveTestRun", null);
         }
         //------------------------------------------------------------------------------------------------------------------------------
@@ -161,6 +164,7 @@ namespace Vansah
 
         public void RemoveTestLog()
         {
+            send_Screenshot = false;
             ConnectToVansahRest("RemoveTestLog", null);
         }
         //------------------------------------------------------------------------------------------------------------------------------
@@ -195,9 +199,9 @@ namespace Vansah
                 httpClient.DefaultRequestHeaders.Add("Authorization", vansah_Token);
                 if (send_Screenshot)
                 {
-                    Screenshot TakeScreenshot = ((ITakesScreenshot)driver).GetScreenshot();
-                    File = TakeScreenshot.AsBase64EncodedString;
-
+                     Screenshot TakeScreenshot = ((ITakesScreenshot)driver).GetScreenshot();
+                     File = TakeScreenshot.AsBase64EncodedString;
+                   
                 }
                 if (type == "AddTestRunFromJiraIssue")
                 {
@@ -299,20 +303,16 @@ namespace Vansah
                 }
                 if (type == "RemoveTestRun")
                 {
-                    
+
                     httpClient.BaseAddress = new Uri(remove_Test_Run + test_Run_Identifier);
                     response = httpClient.DeleteAsync("").Result;
                 }
-
-
                 if (type == "RemoveTestLog")
                 {
-                    
+
                     httpClient.BaseAddress = new Uri(remove_Test_Log + test_Log_Identifier);
                     response = httpClient.DeleteAsync("").Result;
                 }
-
-
                 if (type == "UpdateTestLog")
                 {
                     requestBody = new();
@@ -326,18 +326,17 @@ namespace Vansah
 
                         requestBody.Add("attachments", array);
                     }
-                   
+
                     httpClient.BaseAddress = new Uri(update_Test_Log + test_Log_Identifier);
                     Content = new StringContent(requestBody.ToJsonString(), Encoding.UTF8, "application/json" /* or "application/json" in older versions */);
                     response = httpClient.PutAsync("", Content).Result;
                 }
-
                 if (response.IsSuccessStatusCode)
                 {
-                    
+
                     var responseMessage = response.Content.ReadAsStringAsync().Result;
                     var obj = JObject.Parse(responseMessage);
-                   
+
                     if (type == "AddTestRunFromJiraIssue")
                     {
 
