@@ -44,8 +44,6 @@ Add your Test Case Key and the result
 
 The Test Case must be [Linked](https://docs.vansah.com/docs-base/linking-test-cases-to-a-jira-issue/) to an Asset such as Jira Issue Key or TestFolder Identifier for which you want to send the Test Results. 
 
-The Test Case Key and Jira Issue Key are case insensitive.
-
 ```c#
 [Test]
         public void TestCase1()
@@ -82,7 +80,7 @@ Run your Tests
 
 
 ### Step 5
-Check your Issue on Jira for the run
+Please check your Jira instance for the issue related to the run
 
 ![image](https://user-images.githubusercontent.com/95007067/245727514-8b77246f-d9d1-4db1-843b-c36dbd99d028.png)
 
