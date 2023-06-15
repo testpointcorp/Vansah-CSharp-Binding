@@ -37,8 +37,7 @@ Configure VansahNode.cs file and paste your vansah connect token here
 
 
 ### Step 3
-Add your Test Case Key and the result
-
+Provide your Jira Issue Key, Test Case Key and the result as per the below snippet
 
 👋 Note : 
 
@@ -80,7 +79,7 @@ Run your Tests
 
 
 ### Step 5
-Please check your Jira instance for the issue related to the run
+Check your Jira instance for the issue related to the run
 
 ![image](https://user-images.githubusercontent.com/95007067/245727514-8b77246f-d9d1-4db1-843b-c36dbd99d028.png)
 
@@ -210,10 +209,7 @@ SetEnvironment_Name(string environment_Name);
 
 
 ## Support
-For questions, suggestions, or other requests, please reach out to us through our support channels: https://community.vansah.com/ to raise a ticket: https://vansahapp.atlassian.net/servicedesk/customer/portals
+If you have any questions, suggestions, or other requests, please don't hesitate to contact us through our support channels. You can visit our community website at https://community.vansah.com/ to raise a ticket. Additionally, you can reach us through our customer portal at https://vansahapp.atlassian.net/servicedesk/customer/portals.
 
---
 
-© 2023 Vansah®. All rights reserved, See license.md for details.
-
-https://www.vansah.com
+© 2023 Vansah®. All rights reserved. Please refer to license.md for more information.
