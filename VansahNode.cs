@@ -105,7 +105,7 @@ namespace Vansah
         public void AddTestLog(string result, string Comment, int testStepRow, bool sendScreenShot, IWebDriver driver)
         {
 
-            result_Name = result;
+            result_Name = result.ToLower();
             comment = Comment;
             step_Order = testStepRow;
             send_Screenshot = sendScreenShot;
@@ -128,7 +128,7 @@ namespace Vansah
 
             //0 = N/A, 1= FAIL, 2= PASS, 3 = Not tested
             case_Key = testCase;
-            result_Name = result;
+            result_Name = result.ToLower();
             send_Screenshot = false;
             ConnectToVansahRest("AddQuickTestFromJiraIssue", null);
         }
@@ -138,7 +138,7 @@ namespace Vansah
 
             //0 = N/A, 1= FAIL, 2= PASS, 3 = Not tested
             case_Key = testCase;
-            result_Name = result;
+            result_Name = result.ToLower();
             send_Screenshot = false;
 
             ConnectToVansahRest("AddQuickTestFromTestFolders", null);
@@ -177,7 +177,7 @@ namespace Vansah
         public void UpdateTestLog(string result, string Comment, bool sendScreenShot, IWebDriver driver)
         {
 
-            result_Name = result;
+            result_Name = result.ToLower();
             comment = Comment;
             send_Screenshot = sendScreenShot;
             ConnectToVansahRest("UpdateTestLog", driver);
