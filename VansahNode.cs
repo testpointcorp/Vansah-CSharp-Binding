@@ -30,7 +30,7 @@ namespace Vansah
 
 
         //--------------------------- INFORM YOUR UNIQUE VANSAH TOKEN HERE ---------------------------------------------------
-        private static string vansah_Token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb20udmFuc2FoLmppcmEudmFuc2FoLXBsdWdpbiIsImlhdCI6MTY4NjA5ODkzMywic3ViIjoiNzEyMDIwOjQyOGIwODFmLTNjMWEtNDA2Zi05MDdiLTc1Mzg1ODg5MTZlOCIsImV4cCI6MjY4NjA5ODkzMywiYXVkIjpbIjJkMTIyYjMwLTdmMjYtM2JjNC1iNTA5LTM0ZDM2NTlkYWYzMSJdLCJ0eXBlIjoiY29ubmVjdCJ9.Wjs5s0Py_s3j7zrPqMLvcEaP08FtOkxg3SxQHG08k0w";
+        private static string vansah_Token = "Your Token Here";
 
 
         //--------------------------- INFORM IF YOU WANT TO UPDATE VANSAH HERE -----------------------------------------------
