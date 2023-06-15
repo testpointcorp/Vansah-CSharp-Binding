@@ -44,7 +44,7 @@ Add your Test Case Key and the result
 
 The Test Case must be [Linked](https://docs.vansah.com/docs-base/linking-test-cases-to-a-jira-issue/) to an Asset such as Jira Issue Key or TestFolder Identifier for which you want to send the Test Results. 
 
-The Test Case Key and Jira Issue Key are case sensitive.
+The Test Case Key and Jira Issue Key are case insensitive.
 
 ```c#
 [Test]
@@ -53,21 +53,21 @@ The Test Case Key and Jira Issue Key are case sensitive.
           VansahNode execute = new VansahNode();
 
             //Provide your Jira Issue Key
-            execute.SetJIRA_ISSUE_KEY("TEST-1");
+            execute.SetJira_Issue_Key("Test-1");
                    
             try
             {
                 Assert.Pass();
 
                 //Provide Your Test Case Key and Result 
-                //N/A, FAILED, PASSED, UNTESTED
-                execute.AddQuickTestFromJiraIssue("TEST-C1", "PASSED");
+                //n/a, failed, passed, untested
+                execute.AddQuickTestFromJiraIssue("Test-C1", "passed");
             }
             catch (Exception ex)
             {
                 //Provide Your Test Case Key and Result 
-                //N/A, FAILED, PASSED, UNTESTED
-                execute.AddQuickTestFromJiraIssue("TEST-C1", "FAILED");
+                //n/a, failed, passed, untested
+                execute.AddQuickTestFromJiraIssue("Test-C1", "failed");
 
             }
         }
@@ -82,7 +82,7 @@ Run your Tests
 
 
 ### Step 5
-Check you Issue on Jira for the run
+Check your Issue on Jira for the run
 
 ![image](https://user-images.githubusercontent.com/95007067/245727514-8b77246f-d9d1-4db1-843b-c36dbd99d028.png)
 
@@ -129,19 +129,19 @@ RemoveTestRun();
 
 ```c#
 //To Set the TestFolder as an Asset
-SetTESTFOLDERS_ID(string testFolders_Id);
+SetTestFolders_Id(string testFolders_Id);
 
 //To Set the Jira Issue as an Asset
-SetJIRA_ISSUE_KEY(string jira_Issue_Key);
+SetJira_Issue_Key(string jira_Issue_Key);
 
 //To Set the Sprint in the Test Run Properties
-SetSPRINT_NAME(string sprint_Name);
+SetSprint_Name(string sprint_Name);
 
 //To Set the Version/Release in the Test Run Properties
-SetRELEASE_NAME(string release_Name);
+SetRelease_Name(string release_Name);
 
 //To Set the Environment in the Test Run Properties
-SetENVIRONMENT_NAME(string environment_Name);
+SetEnvironment_Name(string environment_Name);
 
 ```
 | Description                     |
