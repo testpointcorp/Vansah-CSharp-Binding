@@ -29,13 +29,13 @@ Include [VansahNode.cs](https://github.com/testpointcorp/Vansah-CSharp-Binder/bl
 
 To add Vansah C# Binder as a dependency and install the necessary packages in a project using Visual Studio and NuGet Packages Manager, follow these steps:
 
-1.Open your project in Visual Studio.
+1. Open your project in Visual Studio
 
-2.Go to the "Project" menu at the top.
+2. Go to the "Project" menu at the top
 
-3.Select "Manage NuGet Packages" from the dropdown menu.
+3. Select "Manage NuGet Packages" from the dropdown menu
 
-4.Search for below dependencies and install the appropriate packages.
+4. Search for below dependencies and install the appropriate packages
 
     -> Selenium.WebDriver
 
