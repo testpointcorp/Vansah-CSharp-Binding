@@ -14,7 +14,7 @@ Vansah's API is designed to facilitate the integration of Vansah with a wide ran
 * [Generate Vansah Connect Token ](https://docs.vansah.com/docs-base/generate-a-vansah-api-token-from-jira/)
 * [Atleast 1 Test Case linked to a Jira Issue to run](https://docs.vansah.com/docs-base/linking-test-cases-to-a-jira-issue/)
 * [Download VansahNode.cs C# binder from Github ](https://github.com/testpointcorp/Vansah-CSharp-Binder/blob/main/VansahNode.cs)
-* Selenium dependency should be installed [Refer Step 2]
+* Selenium dependency should be installed
 
 
 ## Usage/Examples
@@ -25,32 +25,9 @@ Include [VansahNode.cs](https://github.com/testpointcorp/Vansah-CSharp-Binder/bl
 
 ![image](https://user-images.githubusercontent.com/95007067/245723781-a90ce9e1-9dd4-4623-93d5-228210fa1489.png)
 
+
+
 ### Step 2
-
-To add Vansah C# Binder dependency and install the necessary packages in a project using Visual Studio and NuGet Packages Manager, follow these steps:
-
-1. Open your project in Visual Studio
-
-2. Go to the "Project" menu at the top
-
-3. Select "Manage NuGet Packages" from the dropdown menu
-
-4. Search for below dependencies and install the appropriate packages
-
-    -> Selenium.WebDriver
-
-    -> Selenium.WebDriver.ChromeDriver
-
-    -> OpenQA.Selenium.Winium
-
-After installing all the necessary packages, you can start using them in your project 
-
-Note: The specific versions and package names may vary depending on the available versions and updates. Make sure to choose the appropriate packages that suit your project's requirements.
-
-![image](https://github-production-user-asset-6210df.s3.amazonaws.com/8676199/246290146-691741c2-1940-4c62-b451-1aa06123ee40.png)
-
-
-### Step 3
 
 Configure VansahNode.cs file and paste your vansah connect token here 
 [Generate Vansah Connect Token ](https://docs.vansah.com/docs-base/generate-a-vansah-api-token-from-jira/)
@@ -59,7 +36,7 @@ Configure VansahNode.cs file and paste your vansah connect token here
 ![image](https://user-images.githubusercontent.com/95007067/245725004-0ed5e90b-6930-4b9e-8fa0-e7077305b933.png)
 
 
-### Step 4
+### Step 3
 Provide your Jira Issue Key, Test Case Key and the result as per the below snippet
 
 👋 Note : 
@@ -92,7 +69,7 @@ The Test Case must be [Linked](https://docs.vansah.com/docs-base/linking-test-ca
             }
         }
  ```
-### Step 5
+### Step 4
 Run your Tests
 
 ![image](https://user-images.githubusercontent.com/95007067/245725721-556bd502-1704-444d-ba03-422607e5c6fa.png)
@@ -101,7 +78,7 @@ Run your Tests
 
 
 
-### Step 6
+### Step 5
 Check your Jira instance for the issue related to the run
 
 ![image](https://user-images.githubusercontent.com/95007067/245727514-8b77246f-d9d1-4db1-843b-c36dbd99d028.png)
