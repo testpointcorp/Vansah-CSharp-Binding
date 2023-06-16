@@ -27,7 +27,7 @@ Include [VansahNode.cs](https://github.com/testpointcorp/Vansah-CSharp-Binder/bl
 
 ### Step 2
 
-To add Vansah C# Binder as a dependency and install the necessary packages in a project using Visual Studio and NuGet Packages Manager, follow these steps:
+To add Vansah C# Binder dependency and install the necessary packages in a project using Visual Studio and NuGet Packages Manager, follow these steps:
 
 1. Open your project in Visual Studio
 
