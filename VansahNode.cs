@@ -357,14 +357,14 @@ namespace Vansah
                     }
                     if (type == "AddQuickTestFromJiraIssue")
                     {
-
+                        test_Run_Identifier = obj.SelectToken("data.run.identifier").ToString();
                         string message = obj.SelectToken("message").ToString();
                         Console.WriteLine($"Quick Test : {message}");
 
                     }
                     if (type == "AddQuickTestFromTestFolders")
                     {
-
+                        test_Run_Identifier = obj.SelectToken("data.run.identifier").ToString();
                         string message = obj.SelectToken("message").ToString();
                         Console.WriteLine($"Quick Test : {message}");
 
