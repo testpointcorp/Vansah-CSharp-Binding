@@ -81,7 +81,7 @@ Run your Tests
 ### Step 5
 Check your Jira instance for the issue related to the run
 
-![image](https://user-images.githubusercontent.com/95007067/245727514-8b77246f-d9d1-4db1-843b-c36dbd99d028.png)
+![image](https://user-images.githubusercontent.com/95007067/248912620-19f28df0-d48a-4779-883b-d721638dfb12.png)
 
 
 
