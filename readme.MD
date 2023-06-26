@@ -14,7 +14,7 @@ Vansah's API is designed to facilitate the integration of Vansah with a wide ran
 * [Generate Vansah Connect Token ](https://docs.vansah.com/docs-base/generate-a-vansah-api-token-from-jira/)
 * [Atleast 1 Test Case linked to a Jira Issue to run](https://docs.vansah.com/docs-base/linking-test-cases-to-a-jira-issue/)
 * [Download VansahNode.cs C# binder from Github ](https://github.com/testpointcorp/Vansah-CSharp-Binder/blob/main/VansahNode.cs)
-* Selenium dependency should be installed
+* [Selenium dependency should be installed ](https://github.com/testpointcorp/Vansah-CSharp-Binder/wiki/How-to-Install-Selenium-Dependency-in-Visual-Studio%3F)
 
 
 ## Usage/Examples
