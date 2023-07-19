@@ -1,4 +1,4 @@
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using OpenQA.Selenium;
 using System;
@@ -31,7 +31,7 @@ namespace Vansah
 
 
         //--------------------------- INFORM YOUR UNIQUE VANSAH TOKEN HERE ---------------------------------------------------
-        private static string vansah_Token = "Your Vansah Token here";
+        private static string vansah_Token = "Your Token Here";
 
 
         //--------------------------- INFORM IF YOU WANT TO UPDATE VANSAH HERE -----------------------------------------------
@@ -377,6 +377,10 @@ namespace Vansah
                     {
                         Console.WriteLine($"Test Run has been removed Successfully for the testCase : {case_Key} RUN ID : {test_Run_Identifier}");
 
+                    }
+                     if (type == "UpdateTestLog")
+                    {
+                        Console.WriteLine($"Test Log has been updated Successfully LOG ID : {test_Log_Identifier}");
                     }
                     response.Dispose();
 
