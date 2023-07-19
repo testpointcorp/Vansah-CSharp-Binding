@@ -2,30 +2,33 @@
   <img src="https://user-images.githubusercontent.com/95007067/245728119-98d2b310-a43c-4d17-8a67-cc47d8ff9b3a.png" />
 </div>
 
-# Vansah C# Binder
-Vansah's API is designed to facilitate the integration of Vansah with a wide range of tools, automation, and development frameworks, including third-party applications. One such integration option is the .NET Vansah Binder, which enables automation projects using .NET and C#. For instance, a commonly used tool in this context is Selenium, which can be utilized alongside (.NET C#). 
+<h1 align="center" style="background-color:cornflowerblue !important;
+    color: white !important;">
+  Vansah C# Binder
+</h1>
+
+
+Vansah's API enables the integration of Vansah with a range of tools, automation, and development frameworks, including third-party applications. We provide a sample project that demonstrates the utilization of Vansah Binder in conjunction with C# .NET framework and Selenium to showcase how you can incorporate it into your own project. A simple test to load https://selenium.vansah.io and send results to your Jira instance when using Vansah TM app.
 
 ##  Tools and Languages
 -	C# Language
 -	Jira cloud workspace with [Vansah Test Management For Jira](https://marketplace.atlassian.com/apps/1224250/vansah-test-management-for-jira) installed
 
+
 ## Prerequisite
 
 * [Generate Vansah Connect Token ](https://docs.vansah.com/docs-base/generate-a-vansah-api-token-from-jira/)
 * [Atleast 1 Test Case linked to a Jira Issue to run](https://docs.vansah.com/docs-base/linking-test-cases-to-a-jira-issue/)
-* [Download VansahNode.cs C# binder from Github ](https://github.com/testpointcorp/Vansah-CSharp-Binder/blob/main/VansahNode.cs)
+* [Download Vansah API-Binding for C# from Github](https://github.com/testpointcorp/vansahSeleniumCSharpDotNetDemo)
 * [Selenium dependency should be installed ](https://github.com/testpointcorp/Vansah-CSharp-Binder/wiki/How-to-Install-Selenium-Dependency-in-Visual-Studio%3F)
-
 
 ## Usage/Examples
 
 ### Step 1
 
-Include [VansahNode.cs](https://github.com/testpointcorp/Vansah-CSharp-Binder/blob/main/VansahNode.cs) into your Project directory
+Include [VansahNode.cs](https://github.com/testpointcorp/vansahSeleniumCSharpDotNetDemo/blob/main/VansahNode.cs) into your Project directory
 
 ![image](https://user-images.githubusercontent.com/95007067/245723781-a90ce9e1-9dd4-4623-93d5-228210fa1489.png)
-
-
 
 ### Step 2
 
@@ -82,9 +85,6 @@ Run your Tests
 Check your Jira instance for the issue related to the run
 
 ![image](https://user-images.githubusercontent.com/95007067/248912620-19f28df0-d48a-4779-883b-d721638dfb12.png)
-
-
-
 
 ## Available Functions
 
@@ -145,71 +145,10 @@ SetEnvironment_Name(string environment_Name);
 :-------------------------------- |
 |Above functions are use to declare the Asset and Test Properties|
 
-
-## API Reference
-
-### Refer to Vansah API Docs  -> [Vansah API Docs](https://apidoc.vansah.com/)
-
-#### Add Test Run
-
-```http
-  POST https://prod.vansahnode.app/api/v1/run
-```
-| Description                     |
-:-------------------------------- |
-|To create a Test Run Identifier and even this api can be used to a perform quick test |
-
-#### Delete Test Run
-
-```http
-  POST https://prod.vansahnode.app/api/v1/run/${test_run_identifier}
-```
-
-| Description                     |
-:-------------------------------- |
-|To delete a test run for a test Case |
-
-#### Add Test Log
-
-```http
-  POST https://prod.vansahnode.app/api/v1/logs
-```
-| Description                     |
-:-------------------------------- |
-|To add a test log against a test step |
-
-#### Update Test Log
-
-```http
-  POST https://prod.vansahnode.app/api/v1/logs/${testLogIdentifier}
-```
-
-| Description                     |
-:-------------------------------- |
-|To update the current/existing test log of a test step|
-
-#### Delete Test Log
-
-```http
-  POST https://prod.vansahnode.app/api/v1/logs/${testLogIdentifier}
-```
-| Description                     |
-:-------------------------------- |
-|To delete a test log of a test step|
-
-#### Get Test Steps
-
-```http
-  GET https://prod.vansahnode.app/api/v1/testCase/list/testScripts?caseKey=${caseKey}
-```
-
-| Description                     |
-:-------------------------------- |
-|To get the test case script|
-
-
 ## Support
 If you have any questions, suggestions, or other requests, please don't hesitate to contact us through our support channels. You can visit our community website at https://community.vansah.com/ to raise a ticket. Additionally, you can reach us through our customer portal at https://vansahapp.atlassian.net/servicedesk/customer/portals.
 
+<div align="center">
+  © 2023 Vansah®. All rights reserved.
+</div>
 
-© 2023 Vansah®. All rights reserved. Please refer to license.md for more information.
