@@ -8,7 +8,7 @@
 </h1>
 
 
-Vansah's API enables the integration of Vansah with a range of tools, automation, and development frameworks, including third-party applications. We provide a sample project that demonstrates the utilization of Vansah Binder in conjunction with C# .NET framework and Selenium to showcase how you can incorporate it into your own project. A simple test to load https://selenium.vansah.io and send results to your Jira instance when using Vansah TM app.
+Vansah's API is designed to facilitate the integration of Vansah with a wide range of tools, automation, and development frameworks, including third-party applications. One such integration option is the .NET Vansah Binder, which enables automation projects using .NET and C#. For instance, a commonly used tool in this context is Selenium, which can be utilized alongside (.NET C#).
 
 ##  Tools and Languages
 -	C# Language
