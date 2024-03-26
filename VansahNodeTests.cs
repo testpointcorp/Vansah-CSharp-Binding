@@ -18,7 +18,7 @@ namespace Vansah_CSharp_Binding
             VansahNode vs = new VansahNode();
 
             vs.SetVansahToken = Environment.GetEnvironmentVariable("VANSAH_TOKEN") ?? "No Value found!";
-            //vs.SetVansahURL = "https://vtrunkus.vansahnode.app";
+            //vs.SetVansahURL = "https://prodau.vansahnode.app";
 
             vs.JiraIssueKey = "TEST-1";
          
@@ -37,7 +37,7 @@ namespace Vansah_CSharp_Binding
             //This is just a sample code to return screenshot file
             //You need to write your own screenshot function to return the screenshot file;
 
-            string screenshotFile = "C:\\Users\\onesh\\OneDrive\\Documents\\GitHub\\Vansah-CSharp-Binding\\img\\screenshot.png"; //This is a sample path
+            string screenshotFile = "C:\\.......\\img\\screenshot.png"; //This is a sample path
 
             if (!File.Exists(screenshotFile)) {
                 File.Create(screenshotFile).Close();
